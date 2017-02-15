@@ -28,7 +28,7 @@ let f_calc = false;
 function calc_start(){
 	$("#btn-calc").prop("disabled",true);
 	f_calc = true;
-	$("#ta-result").val("計算しています...")
+	//$("#ta-result").val("計算しています...")
 }
 function calc_end(){
 	$("#btn-calc").prop("disabled",false);

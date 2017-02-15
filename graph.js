@@ -45,7 +45,6 @@ const Graph = (function(){
 		}
 		o_connects.forEach(coc=>{
 			coc.map(name=>pointsdic[name]).forEach((id,j,arr)=>{
-				//console.log(id,j,arr);
 				points[id].o_connects = arr.slice(0,j).concat(arr.slice(j+1));
 			});
 		});

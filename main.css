@@ -13,8 +13,7 @@
 	height:300px;
 }
 #ta-stack {
-	width: 100%;/*calc(100% - 2em); */
-	/*display:none;*/
+	width: 100%;
 	vertical-align:top;
 }
 #wrap-ta-stack {

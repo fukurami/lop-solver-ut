@@ -38,7 +38,6 @@ function calc_end(){
 function result_template(value, routes_string, time){
 	return `最長距離: ${value}km (計算時間:${time/1000}秒)\n最長経路:\n${routes_string}`;
 }
-//let current_result = {value:0,routes:[],routes_withValue:[],routes_raw:[]};
 let current_result;
 function proc_result(result){
 	_proc_result(result);
@@ -47,23 +46,13 @@ function proc_result(result){
 }
 function _proc_result(result){
 	let str = result.toString($("#cb-with-value").prop("checked"));
-	//(($("#cb-with-value").prop("checked"))?result.routes_withValue:result.routes).join("\n");
 	let result_str = result_template(result.value, str, result.time);
-	//console.log(result.toString());
 	$("#ta-result").val(result_str);
 }
 function error_handler(e){
 	$("#ta-result").val("Error! "+e);
 }
 function switch_result(){
-	/*if($("#ta-stack").val()=="") return;
-	let f_withValue = $("#cb-with-value").prop("checked");
-	let stack = JSON.parse($("#ta-stack").val());
-	//console.log(stack);
-	let graph = $("#cb-include-jr").prop("checked")?LopApp.jr_graph:LopApp.main_graph;
-	let str = LopSolver.stackUtil.toString(stack,graph,f_withValue);
-	let val = stack[0]?LopSolver.stackUtil.getValue(stack[0],graph):0;
-	$("#ta-result").val(result_template(val,str));*/
 	if(!current_result) return;
 	_proc_result(current_result);
 }

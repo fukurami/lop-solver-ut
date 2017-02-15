@@ -32,7 +32,6 @@ const LopApp = (function(){
 			}
 			if(!bp || (!ep1&&!ep2)) return Promise.reject("point(s) not selected.")
 			let [bpi,epi1,epi2] = [bp,ep1,ep2].map(p=>graph.findPoint(p));
-			//console.log(bpi,epi1,epi2);
 			return new Promise((resolve,reject)=>{
 				if(bpi==-1 || (epi1==-1&&epi2==-1)){
 					let str = [bpi,epi1,epi2].filter(v=>v==-1).map(v=>graph.points[v].name).join(", ");

@@ -1,5 +1,12 @@
+#lop-head {
+	width:600px;
+}
 #lop-head h1 {
-	font-size: large;
+	background-color:#00c;
+	padding:5px;
+	border-radius:5px;
+	color:#fff;
+	font-size:large;
 }
 #lop-main {
 	width:600px;
@@ -13,11 +20,11 @@
 	height:300px;
 }
 #ta-stack {
-	width: 100%;
+	width:100%;
 	vertical-align:top;
 }
 #wrap-ta-stack {
-	display: none;
+	display:none;
 }
 #cb-show-stack{
 	display:none;

@@ -1,0 +1,28 @@
+#lop-head h1 {
+	font-size: large;
+}
+#lop-main {
+	width:600px;
+}
+#lop-control {
+	border:1px solid #333;
+	padding:10px 20px;
+}
+#ta-result {
+	width:100%;
+	height:300px;
+}
+#ta-stack {
+	width: 100%;/*calc(100% - 2em); */
+	/*display:none;*/
+	vertical-align:top;
+}
+#wrap-ta-stack {
+	display: none;
+}
+#cb-show-stack{
+	display:none;
+}
+#cb-show-stack:checked ~ #wrap-ta-stack{
+	display:block;
+}

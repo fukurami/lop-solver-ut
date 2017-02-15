@@ -36,7 +36,7 @@ function calc_end(){
 }
 
 function result_template(value, routes_string, time){
-	return `最長距離: ${value}km (計算時間:${time/1000}秒)\n最長経路:\n${routes_string}`;
+	return `最長距離: ${value}km (計算時間:${Math.round(time*1000)/1000000}秒)\n最長経路:\n${routes_string}`;
 }
 let current_result;
 function proc_result(result){

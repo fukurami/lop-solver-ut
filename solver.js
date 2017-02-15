@@ -5,7 +5,7 @@ class RouteTracer{
 	constructor(){
 		this.routes = [];
 		this.value = 0;
-		this.time = (new Date()).getTime();
+		this.time = performance.now();
 		return this;
 	}
 	add(stack,value){
@@ -30,7 +30,7 @@ class RouteTracer{
 			),
 			value:this.value,
 			routes_raw:this.routes,
-			time:(new Date()).getTime()-this.time,
+			time:performance.now()-this.time,
 			toString:function(f_withValue){
 				return this.routes_raw.map(st=>(f_withValue)? stack_toString_withValue(st,graph):stack_toString(st,graph)).join("\n");
 			}

@@ -54,6 +54,7 @@ const Graph = (function(){
 
 	class Graph{
 		constructor(line_data, o_connects){
+			o_connects = o_connects || [];
 			let {points,edges} = _createPointAndEdgeData(line_data, o_connects);
 			this.points = points;
 			this.edges = edges;

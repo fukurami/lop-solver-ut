@@ -36,7 +36,7 @@ function calc_end(){
 }
 
 function result_template(value, routes_string, time){
-	return `最長距離: ${value}km (計算時間:${Math.round(time*1000)/1000000}秒)\n最長経路:\n${routes_string}`;
+	return `最長距離: ${value}km (計算時間:${Math.round(time*1000)/1000000}秒)\r\n最長経路:\r\n${routes_string}`;
 }
 let current_result;
 function proc_result(result){
@@ -48,6 +48,16 @@ function _proc_result(result){
 	let str = result.toString($("#cb-with-value").prop("checked"));
 	let result_str = result_template(result.value, str, result.time);
 	$("#ta-result").val(result_str);
+	set_dl_link(result_str);
+}
+function set_dl_link(result_str){
+	$("#dl-link").attr({
+		href:createTxtDataURI(result_str),
+		download:"lop-result-"+Date.now()+".txt"
+	})
+}
+function createTxtDataURI(text){
+	return "data:text/plain;base64,"+window.btoa(unescape(encodeURIComponent(text)));
 }
 function error_handler(e){
 	$("#ta-result").val("Error! "+e);

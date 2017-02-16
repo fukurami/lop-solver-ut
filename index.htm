@@ -18,10 +18,11 @@
 	<button id="btn-calc">計算</button> (最大で数分程度かかります)
 </div>
 <div id="lop-result">
-	<p>
-		<label><input id="cb-with-value" type="checkbox" />各駅での累計距離を入れる</label><br />
-		<textarea id="ta-result" readonly></textarea>
-	</p>
+	<div>
+		<div style="float:left;"><label><input id="cb-with-value" type="checkbox" />各駅での累計距離を入れる</label></div>
+		<div style="float:right;font-size:small;"><a id="dl-link" href="#">Save as txt</a></div>
+		<div><textarea id="ta-result" readonly></textarea></div>
+	</div>
 	<div>
 		<input id="cb-show-stack" type="checkbox"><label for="cb-show-stack">＊</label>
 		<div id="wrap-ta-stack">

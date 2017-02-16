@@ -11,6 +11,9 @@
 #lop-main {
 	width:600px;
 }
+#lop-result {
+	margin-top:10px;
+}
 #lop-control {
 	border:1px solid #333;
 	padding:10px 20px;

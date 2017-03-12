@@ -30,12 +30,12 @@ const LopApp = (function(){
 				solver = this.slim_solver;
 				graph = this.slim_graph;
 			}
-			if(!bp || (!ep1&&!ep2)) return Promise.reject("point(s) not selected.")
+			if(!bp || (!ep1&&!ep2)) return Promise.reject("駅が選択されていません")
 			let [bpi,epi1,epi2] = [bp,ep1,ep2].map(p=>graph.findPoint(p));
 			return new Promise((resolve,reject)=>{
 				if(bpi==-1 || (epi1==-1&&epi2==-1)){
 					let str = [bpi,epi1,epi2].filter(v=>v==-1).map(v=>graph.points[v].name).join(", ");
-					reject("point(s): "+str + " not found.");
+					reject("駅「"+str+"」が見つかりません");
 					return;
 				}
 				console.time("solver");
